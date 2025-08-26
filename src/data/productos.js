@@ -1,7 +1,8 @@
 export const productos = [
+  
   {
-    image: '/images/vela-xoxo/main.jpg',
-    hoverImage: '/images/vela-xoxo/hover.jpg',
+    image: '/images/vela-xoxo/main.webp',
+    hoverImage: '/images/vela-xoxo/hover.webp',
     name: 'Vela XOXO',
     price: '$15900',
     stock: true,
@@ -10,40 +11,40 @@ export const productos = [
     descripcion: 'Vela Coleccion XOXO by Lume. Dulce, simpática y lista para sorprender. Incluye caja.',
     categoria: 'productos',
   },
-  {
-    image: '/images/vela-cuenco-con-mariposa/main.jpg', 
-    name: 'Cuenco con mariposa. Coleccion XOXO',
-    price: '$9000',
-    stock: true,
-    destacado: false,
-    slug: 'vela-cuenco-con-mariposa',
-    descripcion: 'Coleccion XOXO by Lume. Vela dulce, simpática y lista para sorprender.',
-    categoria: 'productos',
-  },
-  {
-    image: '/images/vela-bubble-con-base-bubble/main.jpg',
-    name: 'Vela bubble con base bubble. Coleccion XOXO',
-    price: '$9900',
-    stock: true,
-    destacado: false,
-    slug: 'vela-bubble-con-base-bubble',
-    descripcion: 'Coleccion XOXO by Lume. Vela bubble con base bubble. Dulce, simpática y lista para sorprender.',
-    categoria: 'productos',
-  },
-  {
-    image: '/images/ramo-flores-7/main.jpg',
-    name: 'Ramo con 7 flores. Coleccion XOXO',
-    price: '$14900',
-    stock: true,
-    destacado: true,
-    slug: 'ramo-flores-7',
-    descripcion: 'Ramo con 7 flores. Coleccion XOXO by Lume. Dulce, simpática y lista para sorprender.',
-    categoria: 'productos',
-  },
 
-  {
-    image: '/images/vela-aromatica/main.jpg',
-    hoverImage: '/images/vela-aromatica/hover.jpg',
+    { image: '/images/vela-cuenco-con-mariposa/main.webp', 
+        name: 'Cuenco con mariposa. Coleccion XOXO',
+        price: '$9000',
+        stock: true,
+        destacado: false,
+        slug: 'vela-cuenco-con-mariposa',
+        descripcion: 'Coleccion XOXO by Lume. Vela dulce, simpática y lista para sorprender.',
+    categoria: 'productos',
+      },
+
+    { image: '/images/vela-bubble-con-base-bubble/main.webp',
+        name: 'Vela bubble con base bubble. Coleccion XOXO',
+        price: '$9900',
+        stock: true,
+        destacado: false,
+        slug: 'vela-bubble-con-base-bubble',
+        descripcion: 'Coleccion XOXO by Lume. Vela bubble con base bubble. Dulce, simpática y lista para sorprender.',
+    categoria: 'productos',
+      },
+   
+      { image: '/images/ramo-flores-7/main.webp',
+        name: 'Ramo con 7 flores. Coleccion XOXO',
+        price: '$14900',
+        stock: true,
+        destacado: true,
+        slug: 'ramo-flores-7',
+        descripcion: 'Ramo con 7 flores. Coleccion XOXO by Lume. Dulce, simpática y lista para sorprender.',
+    categoria: 'productos',
+      },
+
+{
+    image: '/images/vela-aromatica/main.webp',
+    hoverImage: '/images/vela-aromatica/hover.webp',
     name: 'Vela Aromatica',
     price: '$10900',
     stock: true,
@@ -53,8 +54,8 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/vela-iced-coffe/hover.jpg',
-    hoverImage: '/images/vela-iced-coffe/main.jpg',
+    image: '/images/vela-iced-coffe/hover.webp',
+    hoverImage: '/images/vela-iced-coffe/main.webp',
     name: 'Iced Coffee',
     price: '$17900',
     stock: true,
@@ -64,8 +65,8 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/vela-lavanda-tea/hover.jpg',
-    hoverImage: '/images/vela-lavanda-tea/main.jpg',
+    image: '/images/vela-lavanda-tea/hover.webp',
+    hoverImage: '/images/vela-lavanda-tea/main.webp',
     name: 'Lavanda Tea',
     price: '$17900',
     stock: true,
@@ -75,8 +76,8 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/vela-strawberry-smothie/hover.jpg',
-    hoverImage: '/images/vela-strawberry-smothie/main.jpg',
+    image: '/images/vela-strawberry-smothie/hover.webp',
+    hoverImage: '/images/vela-strawberry-smothie/main.webp',
     name: 'Strawberry Smothie',
     price: '$17900',
     stock: true,
@@ -87,7 +88,7 @@ export const productos = [
   },
 
   {
-    image: '/images/Set-elegance/main.jpg',
+    image: '/images/Set-elegance/main.webp',
     name: 'Set Elegance',
     price: '$29900',
     stock: true,
@@ -97,7 +98,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/elegance-18cm/main.jpg',
+    image: '/images/elegance-18cm/main.webp',
     name: 'Elegance 18cm',
     price: '$16900',
     stock: true,
@@ -107,7 +108,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/elegance-11cm/main.jpg',
+    image: '/images/elegance-11cm/main.webp',
     name: 'Elegance 11cm',
     price: '$7900',
     stock: true,
@@ -117,7 +118,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/elegance-7cm/main.jpg',
+    image: '/images/elegance-7cm/main.webp',
     name: 'Elegance 7cm',
     price: '$6900',
     stock: true,
@@ -126,10 +127,20 @@ export const productos = [
     descripcion: 'Velas decorativas de la colección ELEGANCE 🌿 creadas para transformar cualquier espacio con elegancia, calidez y estilo. Diseños únicos, aromas envolventes y detalles artesanales que iluminan tus momentos más especiales',
     categoria: 'productos',
   },
+  {
+    image: '/images/velon-bubble/main.webp',
+    name: 'Velón Bubble',
+    price: '$7900',
+    stock: true,
+    destacado: false,
+    slug: 'velon-bubble',
+    descripcion: 'Velón bubble especial para decorar. Dulce, simpática y lista para sorprender.',
+    categoria: 'productos',
+  },
 
      {
-        image: '/images/tornasol/main.jpg',
-        hoverImage: '/images/tornasol/hover.jpg',
+        image: '/images/tornasol/main.webp',
+        hoverImage: '/images/tornasol/hover.webp',
         name: 'Vela tornasol',
         price: '$16900',
         stock: true,
@@ -139,8 +150,8 @@ export const productos = [
     categoria: 'productos',
       },
       {
-        image: '/images/tornasol-ondulada/main.jpg',
-        hoverImage: '/images/tornasol-ondulada/hover.jpg',
+        image: '/images/tornasol-ondulada/main.webp',
+        hoverImage: '/images/tornasol-ondulada/hover.webp',
         name: 'Vela tornasol ondulada',
         price: '$16900',
         stock: true,
@@ -153,8 +164,8 @@ export const productos = [
 
       
   {
-    image: '/images/vela-amore/main.jpg',
-    hoverImage: '/images/vela-amore/hover.jpeg',
+    image: '/images/vela-amore/main.webp',
+    hoverImage: '/images/vela-amore/hover.webp',
     name: 'Velas Amore',
     price: '$16900',
     stock: true,
@@ -164,7 +175,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/vela-amore-mini/main.jpg',
+    image: '/images/vela-amore-mini/main.webp',
     name: 'Velas Amore Oval',
     price: '$14900',
     stock: true,
@@ -175,8 +186,8 @@ export const productos = [
   },
 
   {
-    image: '/images/duo-osito/main.jpg',
-    hoverImage: '/images/duo-osito/hover.jpeg',
+    image: '/images/duo-osito/main.webp',
+    hoverImage: '/images/duo-osito/hover.webp',
     name: 'Duo Cápsula Love Osito',
     price: '$15500',
     stock: true,
@@ -186,8 +197,8 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/duo-corazon/main.jpg',
-    hoverImage: '/images/duo-corazon/hover.jpeg',
+    image: '/images/duo-corazon/main.webp',
+    hoverImage: '/images/duo-corazon/hover.webp',
     name: 'Duo Cápsula Love Corazón',
     price: '$15500',
     stock: true,
@@ -199,7 +210,7 @@ export const productos = [
 
 
   {
-    image: '/images/set-velas-20cm-amore/main.jpg',
+    image: '/images/set-velas-20cm-amore/main.webp',
     name: 'Set 3 Velas Amore de 20 cm',
     price: '$10500',
     stock: true,
@@ -209,7 +220,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/set-velas-20cm-verde/main.jpg',
+    image: '/images/set-velas-20cm-verde/main.webp',
     name: 'Set 3 Velas Verde de 20 cm',
     price: '$10500',
     stock: true,
@@ -219,7 +230,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/velon-torsionado-20cm/main.jpg',
+    image: '/images/velon-torsionado-20cm/main.webp',
     name: 'Velon Torsionado de 20cm',
     price: '$3900',
     stock: true,
@@ -229,8 +240,8 @@ export const productos = [
     categoria: 'productos',
   },
      {
-    image: '/images/vela-portacandelabro/main.jpg',
-    hoverImage: '/images/vela-portacandelabro/hover.jpg',
+    image: '/images/vela-portacandelabro/main.webp',
+    hoverImage: '/images/vela-portacandelabro/hover.webp',
     name: 'Vela 20cm con Portacandelabro',
     price: '$9900',
     stock: true,
@@ -241,7 +252,7 @@ export const productos = [
   },
 
   {
-    image: '/images/vela-pearl/main.jpg',
+    image: '/images/vela-pearl/main.webp',
     name: 'Vela Pearl',
     price: '$9900',
     stock: true,
@@ -251,7 +262,7 @@ export const productos = [
     categoria: 'productos',
   },
   {
-    image: '/images/vela-pearl-mayor/main.jpg',
+    image: '/images/vela-pearl-mayor/main.webp',
     name: 'Vela Pearl por mayor',
     price: '$0',
     stock: true,
@@ -262,8 +273,8 @@ export const productos = [
   },
 
    {
-    image: '/images/velas-set-aromaticas/main.jpg',
-    hoverImage: '/images/velas-set-aromaticas/hover.jpg',
+    image: '/images/velas-set-aromaticas/main.webp',
+    hoverImage: '/images/velas-set-aromaticas/hover.webp',
     name: 'Set de Velas Aromaticas',
     price: '$14900',
     stock: true,
@@ -275,7 +286,7 @@ export const productos = [
 
 
     {
-      image: '/images/vela-cocker/main.jpg',
+      image: '/images/vela-cocker/main.webp',
       name: 'Cocker Personalizado',
       price: '$8500',
       stock: true,
@@ -285,7 +296,7 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-labrador/main.jpg',
+      image: '/images/vela-labrador/main.webp',
       name: 'Labrador Personalizado',
       price: '$9500',
       stock: true,
@@ -295,8 +306,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-caniche/main.jpg',
-      hoverImage: '/images/vela-caniche/hover.jpg',
+      image: '/images/vela-caniche/main.webp',
+      hoverImage: '/images/vela-caniche/hover.webp',
       name: 'Caniche Personalizado',
       price: '$9500',
       stock: true,
@@ -308,8 +319,8 @@ export const productos = [
 
 
     {
-      image: '/images/vela-caniche-gris/main.jpg',
-      hoverImage: '/images/vela-caniche-gris/hover.jpg',
+      image: '/images/vela-caniche-gris/main.webp',
+      hoverImage: '/images/vela-caniche-gris/hover.webp',
       name: 'Caniche 2 Personalizado',
       price: '$8500',
       stock: true,
@@ -319,8 +330,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-yorkshire/main.jpg',
-      hoverImage: '/images/vela-yorkshire/hover.jpeg',
+      image: '/images/vela-yorkshire/main.webp',
+      hoverImage: '/images/vela-yorkshire/hover.webp',
       name: 'Yorkshire Terrier Personalizado',
       price: '$8500',
       stock: true,
@@ -330,8 +341,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-golden/main.jpg',
-      hoverImage: '/images/vela-golden/hover.jpeg',
+      image: '/images/vela-golden/main.webp',
+      hoverImage: '/images/vela-golden/hover.webp',
       name: 'Golden Personalizado',
       price: '$9500',
       stock: true,
@@ -341,8 +352,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-rottwailer/main.jpg',
-      hoverImage: '/images/vela-rottwailer/hover.jpeg',
+      image: '/images/vela-rottwailer/main.webp',
+      hoverImage: '/images/vela-rottwailer/hover.webp',
       name: 'Rottweiler Personalizado',
       price: '$9500',
       stock: true,
@@ -352,8 +363,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/velas-gatito/main.jpg',
-      hoverImage: '/images/velas-gatito/hover.jpeg',
+      image: '/images/velas-gatito/main.webp',
+      hoverImage: '/images/velas-gatito/hover.webp',
       name: 'Gatito Personalizado',
       price: '$8500',
       stock: true,
@@ -363,8 +374,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-salchicha/main.jpeg',
-      hoverImage: '/images/vela-salchicha/hover.jpg',
+      image: '/images/vela-salchicha/main.webp',
+      hoverImage: '/images/vela-salchicha/hover.webp',
       name: 'Perro Salchicha',
       price: '$8500',
       stock: true,
@@ -374,8 +385,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-terrier/main.jpg',
-      hoverImage: '/images/vela-terrier/hover.jpg',
+      image: '/images/vela-terrier/main.webp',
+      hoverImage: '/images/vela-terrier/hover.webp',
       name: 'Terrier Personalizado',
       price: '$9500',
       stock: true,
@@ -384,8 +395,9 @@ export const productos = [
       descripcion: 'Vela elegante y simpática con forma de terrier. Perfecta para decorar espacios.',
       categoria: 'productos',
     },
+   
     {
-      image: '/images/vela-bulldog-frances/main.jpg',
+      image: '/images/vela-bulldog-frances/main.webp',
       name: 'Bulldog Frances Personalizado',
       price: '$7500',
       stock: true,
@@ -395,7 +407,8 @@ export const productos = [
       categoria: 'productos',
     },
     {
-      image: '/images/vela-pug/main.jpg',
+      image: '/images/vela-pug/main.webp',
+      hoverImage: '/images/vela-pug/hover.webp',
       name: 'Pug Personalizado',
       price: '$7500',
       stock: true,
@@ -404,16 +417,18 @@ export const productos = [
       descripcion: 'Vela elegante y simpática con forma de pug. Perfecta para decorar espacios.',
       categoria: 'productos',
     },
-    {
-      image: '/images/bombones-aromaticos/main.jpg',
-      hoverImage: '/images/bombones-aromaticos/hover.jpg',
-      name: 'Bombones Aromáticos',
-      price: '$4600',
-      stock: true,
-      destacado: false,
-      slug: 'bombones-aromaticos',
-      descripcion: 'Bombones aromáticos en bolsita de organza. Consultar aromas disponibles',
-      categoria: 'productos',
-    }
+   
+      {
+        image: '/images/bombones-aromaticos/main.webp',
+        hoverImage: '/images/bombones-aromaticos/hover.webp',
+        name: 'Bombones Aromáticos',
+        price: '$4600',
+        stock: true,
+        destacado: false,
+        slug: 'bombones-aromaticos',
+        descripcion: 'Bombones aromáticos en bolsita de organza. Consultar aromas disponibles',
+        categoria: 'productos',
+      },
+      
   ];
   

@@ -1,8 +1,8 @@
 export const souvenirs = [
      
       {
-        image: '/images/vela-osito/main.jpg',
-        hoverImage: '/images/vela-osito/hover.jpg',
+        image: '/images/vela-osito/main.webp',
+        hoverImage: '/images/vela-osito/hover.webp',
         name: 'Osito Souvenir',
         price: '$1900',
         stock: true,
@@ -13,8 +13,8 @@ export const souvenirs = [
       },
 
         {
-    image: '/images/osito-capucha/main.jpg',
-    hoverImage: '/images/osito-capucha/hover.jpg',
+    image: '/images/osito-capucha/main.webp',
+    hoverImage: '/images/osito-capucha/hover.webp',
     name: 'Osito con Capucha',
     price: '$2300',
     stock: true,
@@ -25,8 +25,8 @@ export const souvenirs = [
   },
 
            {
-      image: '/images/vela-cactus/main.jpg',
-      hoverImage: '/images/vela-cactus/hover.jpg',
+      image: '/images/vela-cactus/main.webp',
+      hoverImage: '/images/vela-cactus/hover.webp',
       name: 'Cactus 6cm',
       price: '$2200',
       stock: true,
@@ -36,8 +36,8 @@ export const souvenirs = [
       categoria: 'souvenirs',
     },
      {
-      image: '/images/vela-cactus/main.jpg',
-      hoverImage: '/images/vela-cactus/hover.jpg',
+      image: '/images/vela-cactus/main.webp',
+      hoverImage: '/images/vela-cactus/hover.webp',
       name: 'Cactus 7cm',
       price: '$2300',
       stock: true,
@@ -49,8 +49,8 @@ export const souvenirs = [
 
     
       {
-        image: '/images/vela-jirafa/main.jpg',
-        hoverImage: '/images/vela-jirafa/hover.jpeg',
+        image: '/images/vela-jirafa/main.webp',
+        hoverImage: '/images/vela-jirafa/hover.webp',
         name: 'Jirafa Souvenir',
         price: '$2400',
         stock: true,
@@ -61,8 +61,8 @@ export const souvenirs = [
       },
 
       {
-        image: '/images/vela-leoncito/main.jpg',
-        hoverImage: '/images/vela-leoncito/hover.jpeg',
+        image: '/images/vela-leoncito/main.webp',
+        hoverImage: '/images/vela-leoncito/hover.webp',
         name: 'Leoncito Souvenir',
         price: '$2200',
         stock: true,
@@ -73,8 +73,8 @@ export const souvenirs = [
       },
 
       {
-        image: '/images/souvenir-elefantito/main.jpg',
-        hoverImage: '/images/souvenir-elefantito/hover.jpg',
+        image: '/images/souvenir-elefantito/main.webp',
+        hoverImage: '/images/souvenir-elefantito/hover.webp',
         name: 'Elefantito Souvenir',
         price: '$2500',
         stock: true,
@@ -84,8 +84,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-elefantito-gris/main.jpg',
-        hoverImage: '/images/souvenir-elefantito-gris/hover.jpg',
+        image: '/images/souvenir-elefantito-gris/main.webp',
+        hoverImage: '/images/souvenir-elefantito-gris/hover.webp',
         name: 'Elefantito Gris Souvenir + base de madera',
         price: '$2800',
         stock: true,
@@ -95,8 +95,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-conejita-corazon/main.jpg',
-        hoverImage: '/images/souvenir-conejita-corazon/hover.jpg',
+        image: '/images/souvenir-conejita-corazon/main.webp',
+        hoverImage: '/images/souvenir-conejita-corazon/hover.webp',
         name: 'Conejita Souvenir',
         price: '$2500',
         stock: true,
@@ -107,7 +107,8 @@ export const souvenirs = [
       },
     
       {
-        image: '/images/vela-oso-pooh/main.jpg',
+        image: '/images/vela-oso-pooh/main.webp',
+        hoverImage: '/images/vela-oso-pooh/hover.webp',
         name: 'Oso Pooh Souvenir',
         price: '$2200',
         stock: true,
@@ -117,9 +118,20 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/vela-dinosaurio-souvenir/main.jpg',  
+        image: '/images/souvenir-vaca/main.webp',
+        hoverImage: '/images/souvenir-vaca/hover.webp',
+        name: 'Vaca Souvenir',
+        price: '$2500',
+        stock: true,
+        destacado: false,
+        slug: 'souvenir-vaca',
+        descripcion: 'Vela con diseño de vaca. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        categoria: 'souvenirs',
+      },
+      {
+        image: '/images/vela-dinosaurio-souvenir/main.webp',  
         name: 'Dinosaurio Souvenir',
-        price: '$2400',
+        price: '$2500',
         stock: true,
         destacado: false,
         slug: 'vela-dinosaurio-souvenir',
@@ -127,7 +139,27 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-abeja/main.jpg',  
+        image: '/images/figuras-marinas-souvenir/main.webp',  
+        name: 'Figuras Marinas Souvenir',
+        price: '$2000',
+        stock: true,
+        destacado: false,
+        slug: 'figuras-marinas-souvenir',
+        descripcion: 'Precio por unidad. Velas con diseños de figuras marinas. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        categoria: 'souvenirs',
+      },
+      {
+        image: '/images/vela-pelota-souvenir/main.webp',  
+        name: 'Pelota Souvenir',
+        price: '$2200',
+        stock: true,
+        destacado: false,
+        slug: 'vela-pelota-souvenir',
+        descripcion: 'Vela con diseño de pelota. Simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        categoria: 'souvenirs',
+      },
+      {
+        image: '/images/souvenir-abeja/main.webp',  
         name: 'Abeja Souvenir',
         price: '$2500',
         stock: true,
@@ -137,7 +169,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-mariposa/main.jpg',  
+        image: '/images/souvenir-mariposa/main.webp',  
         name: 'Mariposa Souvenir',
         price: '$2100',
         stock: true,
@@ -147,7 +179,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-mariposa-flores/main.jpg',  
+        image: '/images/souvenir-mariposa-flores/main.webp',  
         name: 'Mariposa Floral Souvenir',
         price: '$1600',
         stock: true,
@@ -157,7 +189,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-mariposa-angel/main.jpg',  
+        image: '/images/souvenir-mariposa-angel/main.webp',  
         name: 'Mariposa Angel Souvenir',
         price: '$1800',
         stock: true,
@@ -168,8 +200,8 @@ export const souvenirs = [
       },
 
 {
-        image: '/images/souvenir-bebe/main.jpg',
-        hoverImage: '/images/souvenir-bebe/hover.jpg',
+        image: '/images/souvenir-bebe/main.webp',
+        hoverImage: '/images/souvenir-bebe/hover.webp',
         name: 'Bebé Souvenir',
         price: '$2400',
         stock: true,
@@ -179,8 +211,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
 
-      { image: '/images/souvenir-angelito-2/main.jpg',
-        hoverImage: '/images/souvenir-angelito-2/hover.jpg',
+      { image: '/images/souvenir-angelito-2/main.webp',
+        hoverImage: '/images/souvenir-angelito-2/hover.webp',
         name: 'Souvenir Angel nena/nene',
         price: '$2600',
         stock: true,
@@ -191,8 +223,8 @@ export const souvenirs = [
       },
 
       {
-        image: '/images/vela-angelito-souvenir/main.jpg',
-        hoverImage: '/images/vela-angelito-souvenir/hover.jpg',
+        image: '/images/vela-angelito-souvenir/main.webp',
+        hoverImage: '/images/vela-angelito-souvenir/hover.webp',
         name: 'Angelito Souvenir',
         price: '$2400',
         stock: true,
@@ -202,8 +234,19 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/vela-bubble-en-caja/main.jpg',
-        hoverImage: '/images/vela-bubble-en-caja/hover.jpg',
+        image: '/images/vela-bubble/main.webp',
+        hoverImage: '/images/vela-bubble/hover.webp',
+        name: 'Souvenir Bubble Simple',
+        price: '$2100',
+        stock: true,
+        destacado: false,
+        slug: 'vela-bubble-sin-caja',
+        descripcion: 'Vela con diseño de bubble simple sin caja. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        categoria: 'souvenirs',
+      },
+      {
+        image: '/images/vela-bubble-en-caja/main.webp',
+        hoverImage: '/images/vela-bubble-en-caja/hover.webp',
         name: 'Souvenir Bubble en caja',
         price: '$4700',
         stock: true,
@@ -214,8 +257,8 @@ export const souvenirs = [
       },
         
       {
-        image: '/images/vela-mini-bubble/main.jpg', 
-        hoverImage: '/images/vela-mini-bubble/hover.jpg',
+        image: '/images/vela-mini-bubble/main.webp', 
+        hoverImage: '/images/vela-mini-bubble/hover.webp',
         name: 'Mini Bubble Souvenir Pack',
         price: '$2400',
         stock: true,
@@ -225,8 +268,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/vela-nube/main.jpg', 
-        hoverImage: '/images/vela-nube/hover.jpg',
+        image: '/images/vela-nube/main.webp', 
+        hoverImage: '/images/vela-nube/hover.webp',
         name: 'Nube Souvenir',
         price: '$2000',
         stock: true,
@@ -237,8 +280,8 @@ export const souvenirs = [
       },
 
         {
-        image: '/images/vela-flores-en-caja/main.jpg',
-        hoverImage: '/images/vela-flores-en-caja/hover.jpg',
+        image: '/images/vela-flores-en-caja/main.webp',
+        hoverImage: '/images/vela-flores-en-caja/hover.webp',
         name: 'Souvenir Flores en caja',
         price: '$3600',
         stock: true,
@@ -248,7 +291,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/velas-flor-loto/main.jpg',  
+        image: '/images/velas-flor-loto/main.webp',  
         name: 'Flor Loto',
         price: '$2400',
         stock: true,
@@ -258,7 +301,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/vela-flor-peonia/main.jpg',
+        image: '/images/vela-flor-peonia/main.webp',
+        hoverImage: '/images/vela-flor-peonia/hover.webp',
         name: 'Flor Peónia',
         price: '$1900',
         stock: true,
@@ -268,8 +312,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/Rosas-souvenir/main.jpg',
-        hoverImage: '/images/Rosas-souvenir/hover.jpg',
+        image: '/images/Rosas-souvenir/main.webp',
+        hoverImage: '/images/Rosas-souvenir/hover.webp',
         name: 'Rosas Souvenir',
         price: '$1900',
         stock: true,
@@ -279,8 +323,18 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/margaritas-souvenir/main.jpg',
-        hoverImage: '/images/margaritas-souvenir/hover.jpg',
+        image: '/images/clavelina-souvenir/main.webp',
+        name: 'Clavelina Souvenir',
+        price: '$2000',
+        stock: true,
+        destacado: false,
+        slug: 'vela-clavelina-souvenir',
+        descripcion: 'Vela con diseño de clavelina. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        categoria: 'souvenirs',
+      },
+      {
+        image: '/images/margaritas-souvenir/main.webp',
+        hoverImage: '/images/margaritas-souvenir/hover.webp',
         name: 'Margaritas Souvenir',
         price: '$1700',
         stock: true,
@@ -291,7 +345,8 @@ export const souvenirs = [
       },
       
       {
-        image: '/images/corazon-souvenir/main.jpg',
+        image: '/images/corazon-souvenir/main.webp',
+        hoverImage: '/images/corazon-souvenir/hover.webp',
         name: 'Corazon Souvenir',
         price: '$2400',
         stock: true,
@@ -301,7 +356,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/oso-corazon-souvenir/main.jpg',
+        image: '/images/oso-corazon-souvenir/main.webp',
         name: 'Oso Corazon Souvenir',
         price: '$2400',
         stock: true,
@@ -311,8 +366,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/oso-panzon/main.jpg',
-        hoverImage: '/images/oso-panzon/hover.jpg',
+        image: '/images/oso-panzon/main.webp',
+        hoverImage: '/images/oso-panzon/hover.webp',
         name: 'Oso Panzón Souvenir',
         price: '$2400',
         stock: true,
@@ -322,8 +377,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-envase100cc/main.jpg',
-        hoverImage: '/images/souvenir-envase100cc/hover.jpg',
+        image: '/images/souvenir-envase100cc/main.webp',
+        hoverImage: '/images/souvenir-envase100cc/hover.webp',
         name: 'Souvenir en envase 100cc',
         price: '$4600',
         stock: true,
@@ -333,8 +388,8 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-envase-40cc/main.jpg',
-        hoverImage: '/images/souvenir-envase-40cc/hover.jpg',
+        image: '/images/souvenir-envase-40cc/main.webp',
+        hoverImage: '/images/souvenir-envase-40cc/hover.webp',
         name: 'Souvenir en envase 40cc',
         price: '$3600',
         stock: true,
@@ -345,7 +400,7 @@ export const souvenirs = [
       },
       
       {
-        image: '/images/souvenir-caramelera/main.jpg',
+        image: '/images/souvenir-caramelera/main.webp',
         name: 'Souvenir caramelera sin tapa',
         price: '$4000',
         stock: true,
@@ -355,7 +410,7 @@ export const souvenirs = [
         categoria: 'souvenirs',
       },
       {
-        image: '/images/souvenir-caramelera-con-tapa/main.jpg',
+        image: '/images/souvenir-caramelera-con-tapa/main.webp',
         name: 'Souvenir caramelera con tapa',
         price: '$5000',
         stock: true,
