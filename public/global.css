@@ -71,6 +71,8 @@ img {
   transition: all var(--transition-normal);
 }
 
+
+
 /* 🎯 UTILIDADES BÁSICAS */
 .container {
   max-width: 1200px;
@@ -250,6 +252,8 @@ img {
   height: auto;
   object-fit: initial;
 }
+
+
 
 .producto-info {
   flex: 1;
@@ -642,4 +646,6 @@ img {
     font-size: 0.9rem;
   }
 }
+
+
 

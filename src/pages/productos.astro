@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import ProductSearch from '../components/ProductSearch.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import { productos } from '../data/productos.js';
 import InfoVelas from '../components/InfoVelas.astro';
@@ -19,7 +20,8 @@ import InfoVelas from '../components/InfoVelas.astro';
         <p>Elegí la que más te guste o pedí tu diseño personalizado.</p>
       </div>
       
-
+      <!-- Componente de búsqueda -->
+      <ProductSearch />
       
       <div class="grid">
         {productos.map((producto) => (
