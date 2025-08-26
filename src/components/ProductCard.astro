@@ -1,0 +1,241 @@
+---
+
+const { image, hoverImage, name, price, stock, slug, categoria } = Astro.props;
+---
+
+
+
+<div class="product-card">
+  <div class="image-container">
+    <a href={`/${categoria}/${slug}`} class="card-link">
+
+      <img
+        src={image}
+        alt={name}
+        onmouseover={hoverImage ? `this.src='${hoverImage}'` : null}
+        onmouseout={`this.src='${image}'`}
+        class="imagen-con-transicion"
+      />
+
+      {!stock && <span class="sin-stock">Sin stock</span>}
+    </a>
+  </div>
+
+  <div class="info">
+    <h3>{name}</h3>
+    <p class="price">{price}</p>
+
+    {stock ? (
+      <button class="btn-agregar" onclick={`agregarAlCarrito('${name}', '${price}', '${image}', '${slug}', '${categoria}')`}>
+        Agregar al carrito
+      </button>
+    ) : (
+      <button class="btn-agregar" disabled>Sin stock</button>
+    )}
+  </div>
+</div>
+
+<script type="module" is:inline>
+  import { agregarAlCarrito } from '/js/cart.js';
+
+ window.agregarAlCarrito = (name, price, image, slug, categoria) => {
+  agregarAlCarrito({ name, price, image, slug, categoria });
+};
+</script>
+
+<style>
+  .product-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border: 1px solid #f0f0f0;
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    height: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all var(--transition-normal);
+  }
+
+  .sin-stock {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    background: linear-gradient(135deg, #ff4757, #ff3742);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
+  }
+
+  .info {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+    background: white;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: var(--font-size-base);
+    margin: 0;
+    line-height: 1.3;
+    color: var(--text-primary);
+    font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-height: 2.6em;
+    overflow: hidden;
+  }
+
+  .price {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .btn-agregar {
+    background: linear-gradient(135deg, #e0a4ce, #d89bc0);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-agregar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-agregar:hover {
+    background: linear-gradient(135deg, #d89bc0, #e0a4ce);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-agregar:hover::after {
+    left: 100%;
+  }
+
+  .btn-agregar:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .imagen-con-transicion {
+    transition: all var(--transition-normal);
+  }
+
+  .imagen-con-transicion:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  /* 📱 RESPONSIVE DESIGN */
+  @media (max-width: 800px) {
+    .image-container {
+      height: 220px;
+    }
+    
+    .info {
+      padding: var(--space-sm);
+    }
+    
+    h3 {
+      font-size: 0.95rem;
+    }
+    
+    .price {
+      font-size: 1.6rem;
+    }
+    
+    .btn-agregar {
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 0.9rem;
+      min-height: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .image-container {
+      height: 200px;
+    }
+    
+    .info {
+      padding: var(--space-sm);
+    }
+    
+    h3 {
+      font-size: 0.9rem;
+    }
+    
+    .price {
+      font-size: 1.5rem;
+    }
+    
+    .btn-agregar {
+      padding: var(--space-xs);
+      font-size: 0.85rem;
+      min-height: 38px;
+    }
+  }
+</style>

@@ -1,0 +1,439 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InfoVelas from '../../components/InfoVelas.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { productos } from '../../data/productos.js';
+
+export async function getStaticPaths() {
+  return productos.map((producto) => ({
+    params: { slug: producto.slug },
+    props: { producto },
+  }));
+}
+
+const { producto } = Astro.props;
+---
+
+<Layout>
+  <div class="pagina-producto">
+    <Breadcrumb items={[
+      { text: "Inicio", href: "/" },
+      { text: "Productos", href: "/productos" },
+      { text: producto.name }
+    ]} />
+
+    <!-- Producto Grid -->
+    <section class="producto-grid">
+      <div class="container">
+        <div class="producto-gallery">
+          <div class="main-image">
+            <img
+              id="main-image"
+              src={producto.image}
+              alt={producto.name}
+              class="imagen-principal"
+            />
+          </div>
+          
+                     {producto.hoverImage && (
+             <div class="thumbnails">
+               <div class="thumbnail active" onclick={`cambiarImagen('${producto.image}')`}>
+                 <img src={producto.image} alt={producto.name} />
+               </div>
+               <div class="thumbnail" onclick={`cambiarImagen('${producto.hoverImage}')`}>
+                 <img src={producto.hoverImage} alt={producto.name} />
+               </div>
+             </div>
+           )}
+        </div>
+
+        <div class="producto-info">
+          <div class="producto-header">
+            <h1>{producto.name}</h1>
+            <div class="header-badges">
+              <span class="categoria">Producto</span>
+              {!producto.stock && <span class="badge-sin-stock">Sin stock</span>}
+            </div>
+          </div>
+
+          <div class="producto-price">
+            <span class="price">{producto.price}</span>
+            <span class="note">Precio por transferencia</span>
+          </div>
+
+          <div class="producto-description">
+            <p>{producto.descripcion}</p>
+          </div>
+
+          <div class="producto-actions">
+            {producto.stock ? (
+              <button
+                class="btn-agregar"
+                onclick={`agregarAlCarrito('${producto.name}', '${producto.price}', '${producto.image}', '${producto.slug}', 'productos')`}
+              >
+                Agregar al carrito
+              </button>
+            ) : (
+              <button class="btn-agregar" disabled>Sin stock</button>
+            )}
+            
+            <a href="/productos" class="btn-volver">
+              ← Volver al catálogo
+            </a>
+          </div>
+
+          <div class="producto-features">
+            <div class="feature">
+              <span class="icon">🕯️</span>
+              <span>Artesanal</span>
+            </div>
+            <div class="feature">
+              <span class="icon">🌿</span>
+              <span>Materiales naturales</span>
+            </div>
+            <div class="feature">
+              <span class="icon">✨</span>
+              <span>Diseño único</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InfoVelas />
+  </div>
+
+  <script type="module" is:inline>
+    import { agregarAlCarrito } from '/js/cart.js';
+
+    window.agregarAlCarrito = (name, price, image, slug, categoria) => {
+      agregarAlCarrito({ name, price, image, slug, categoria });
+    };
+
+    window.cambiarImagen = (src) => {
+      const mainImage = document.getElementById('main-image');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      
+      // Cambiar imagen principal
+      mainImage.src = src;
+      
+      // Actualizar thumbnails activos
+      thumbnails.forEach(thumb => {
+        const thumbImg = thumb.querySelector('img');
+        // Comparar usando endsWith para evitar problemas con URLs absolutas vs relativas
+        if (thumbImg.src.endsWith(src) || thumbImg.src.includes(src.split('/').pop())) {
+          thumb.classList.add('active');
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    };
+  </script>
+
+  <style>
+    .pagina-producto {
+      background: linear-gradient(135deg, var(--surface-light) 0%, var(--secondary) 100%);
+      min-height: 100vh;
+    }
+
+    /* Producto Grid */
+    .producto-grid {
+      padding: var(--space-xl) 0;
+    }
+
+    .producto-grid .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: start;
+    }
+
+    /* Gallery */
+    .producto-gallery {
+      position: sticky;
+      top: var(--space-lg);
+    }
+
+    .main-image {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid #f0f0f0;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-normal);
+    }
+
+    .imagen-principal:hover {
+      transform: scale(1.02);
+      filter: brightness(1.05);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      justify-content: center;
+      background: white;
+      padding: var(--space-sm);
+      border-radius: var(--radius-md);
+      border: 1px solid #f0f0f0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition-normal);
+      opacity: 0.7;
+      background: white;
+    }
+
+    .thumbnail:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .thumbnail.active {
+      border-color: var(--primary);
+      opacity: 1;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Info */
+    .producto-info {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid #f0f0f0;
+    }
+
+    .producto-header {
+      margin-bottom: var(--space-sm);
+    }
+
+    .producto-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-xs);
+      line-height: 1.2;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: var(--space-xs);
+      align-items: center;
+    }
+
+    .categoria {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-sin-stock {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4757, #ff3742);
+      color: white;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      margin-left: var(--space-sm);
+    }
+
+    .producto-price {
+      margin-bottom: var(--space-xs);
+    }
+
+    .price {
+      display: block;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .note {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+
+    .producto-description {
+      margin-bottom: var(--space-sm);
+    }
+
+    .producto-description p {
+      font-size: var(--font-size-base);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .producto-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xs);
+      margin-bottom: 0;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--space-xs);
+      background: var(--surface-light);
+      border-radius: var(--radius-md);
+      border: 1px solid #f0f0f0;
+    }
+
+    .feature .icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-xs);
+    }
+
+    .feature span:last-child {
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .producto-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .btn-agregar {
+      background: linear-gradient(135deg, #e0a4ce, #d89bc0);
+      color: white;
+      padding: var(--space-sm) var(--space-lg);
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-agregar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-agregar:hover {
+      background: linear-gradient(135deg, #d89bc0, #e0a4ce);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-agregar:hover::after {
+      left: 100%;
+    }
+
+    .btn-agregar:disabled {
+      background: #e0e0e0;
+      color: #999;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-volver {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xs) var(--space-xs);
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all var(--transition-normal);
+      font-size: 0.9rem;
+    }
+
+    .btn-volver:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .producto-grid .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+
+      .producto-gallery {
+        position: static;
+      }
+
+      .producto-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .producto-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .producto-info {
+        padding: var(--space-lg);
+      }
+
+      .producto-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .price {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</Layout>
+
