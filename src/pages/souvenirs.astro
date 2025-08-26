@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import SouvenirSearch from '../components/SouvenirSearch.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import { souvenirs } from '../data/souvenirs.js';
 import InfoVelas from '../components/InfoVelas.astro';
@@ -19,7 +20,8 @@ import InfoVelas from '../components/InfoVelas.astro';
         <p>Cantidad mínima: 10 unidades</p>
       </div>
       
-
+      <!-- Componente de búsqueda -->
+      <SouvenirSearch />
       
       <div class="grid">
         {souvenirs.map((souvenir) => (

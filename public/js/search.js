@@ -491,14 +491,13 @@ function displaySearchResults(results, query) {
      `;
   } else {
          searchResultsList.innerHTML = results.map(producto => `
-       <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid #f0f0f0; cursor: pointer; text-decoration: none; color: inherit; min-height: 80px; background: white; box-sizing: border-box;" onclick="window.location.href='/${producto.categoria}/${producto.slug}'">
-         <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 8px; border: 1px solid #e8e8e8; background: #f8f9fa; overflow: hidden; position: relative; box-sizing: border-box;">
-           <img src="${producto.image}" alt="${producto.name}" loading="lazy" style="width: 60px !important; height: 60px !important; object-fit: cover !important; display: block !important; max-width: 60px !important; max-height: 60px !important; min-width: 60px !important; min-height: 60px !important; border-radius: 8px !important; transform: none !important; transition: none !important; box-sizing: border-box !important; position: relative !important; z-index: 1 !important;">
+       <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid #f0f0f0; cursor: pointer; text-decoration: none; color: inherit; min-height: 110px; background: white; box-sizing: border-box;" onclick="window.location.href='/${producto.categoria}/${producto.slug}'">
+         <div style="flex-shrink: 0; width: 100px; height: 100px; border-radius: 8px; border: 1px solid #e8e8e8; background: #f8f9fa; overflow: hidden; position: relative; box-sizing: border-box;">
+           <img src="${producto.image}" alt="${producto.name}" loading="lazy" style="width: 100px !important; height: 100px !important; object-fit: cover !important; display: block !important; max-width: 100px !important; max-height: 100px !important; min-width: 100px !important; min-height: 100px !important; border-radius: 8px !important; transform: none !important; transition: none !important; box-sizing: border-box !important; position: relative !important; z-index: 1 !important;">
          </div>
          <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
            <h4 style="font-size: 1rem; font-weight: 600; color: #2c2c2c; margin: 0 0 0.5rem 0; line-height: 1.3; font-family: 'Playfair Display', serif; box-sizing: border-box;">${producto.name}</h4>
-           <p style="font-size: 1.1rem; font-weight: 700; color: #e0a4ce; margin: 0 0 0.5rem 0; box-sizing: border-box;">${producto.price}</p>
-           <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-family: 'Open Sans', sans-serif; box-sizing: border-box;">${producto.descripcion.substring(0, 80)}${producto.descripcion.length > 80 ? '...' : ''}</p>
+           <p style="font-size: 1.3rem; font-weight: 700; color: #e0a4ce; margin: 0; box-sizing: border-box;">${producto.price}</p>
          </div>
        </div>
      `).join('');
