@@ -124,7 +124,7 @@ img {
 
 .carrito-content {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 420px;
   gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -517,11 +517,12 @@ img {
   min-height: 60px;
 }
 
-.btn-finalizar {
-  display: inline-block;
-  background: linear-gradient(135deg, #e0a4ce, #f7d4ed);
-  color: white;
-  padding: 0.75rem 1rem;
+
+
+
+}
+
+
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
@@ -549,10 +550,52 @@ img {
   left: 100%;
 }
 
+.btn-finalizar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
 .btn-finalizar:hover {
-  background: linear-gradient(135deg, #765580, #e0a4ce);
+  background: linear-gradient(135deg, #1ed760, #25d366);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(224, 164, 206, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.btn-finalizar:hover::before {
+  left: 100%;
+}
+
+.btn-finalizar svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+}
+
+.btn-finalizar {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #25d366, #1ed760);
+  color: white;
+  padding: 1rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

@@ -8,7 +8,7 @@ export const souvenirs = [
         stock: true,
         destacado: true,
         slug: 'vela-osito-souvenir',
-        descripcion: 'Pequeños ositos de cera. Perfectos como souvenir para eventos y bautismos. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Pequeños ositos de cera. Perfectos como souvenir para eventos y bautismos. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -56,7 +56,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-jirafa-souvenir',
-        descripcion: 'Vela con diseño de jirafa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de jirafa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -68,7 +68,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-leoncito-souvenir',
-        descripcion: 'Leoncito de cera, tierno y decorativo. Gran opción para souvenirs infantiles. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Leoncito de cera, tierno y decorativo. Gran opción para souvenirs infantiles. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -80,7 +80,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-elefantito-souvenir',
-        descripcion: 'Vela con diseño de elefantito. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de elefantito. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -91,7 +91,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-elefantito-gris-souvenir',
-        descripcion: 'Vela con diseño de elefantito gris con base de madera. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de elefantito gris con base de madera. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -102,7 +102,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-conejita-souvenir',
-        descripcion: 'Vela con diseño de conejita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de conejita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
     
@@ -114,7 +114,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-oso-pooh',
-        descripcion: 'Vela con diseño de oso Pooh. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de oso Pooh. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -125,7 +125,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'souvenir-vaca',
-        descripcion: 'Vela con diseño de vaca. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de vaca. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -135,7 +135,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-dinosaurio-souvenir',
-        descripcion: 'Vela con diseño de dinosaurio. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de dinosaurio. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -145,7 +145,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'figuras-marinas-souvenir',
-        descripcion: 'Precio por unidad. Velas con diseños de figuras marinas. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Precio por unidad. Velas con diseños de figuras marinas. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -155,7 +155,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-pelota-souvenir',
-        descripcion: 'Vela con diseño de pelota. Simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de pelota. Simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -165,7 +165,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-abeja-souvenir',
-        descripcion: 'Vela con diseño de abejita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de abejita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -175,7 +175,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'mariposa-souvenir',
-        descripcion: 'Vela con diseño de mariposa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de mariposa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -185,7 +185,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'mariposa-flores-souvenir',
-        descripcion: 'Vela con diseño de mariposa con flores. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de mariposa con flores. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -195,7 +195,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'mariposa-angel-souvenir',
-        descripcion: 'Vela con diseño de mariposa con angelito. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de mariposa con angelito. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -207,7 +207,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-bebe-souvenir',
-        descripcion: 'Vela con diseño de bebé. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de bebé. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -218,7 +218,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'souvenir-angel-nena-nene',
-        descripcion: 'Vela con diseño de nena/nene. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de nena/nene. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -230,7 +230,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-angelito-souvenir',
-        descripcion: 'Vela con diseño de angelito. Suave, elegante y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de angelito. Suave, elegante y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -241,7 +241,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-bubble-sin-caja',
-        descripcion: 'Vela con diseño de bubble simple sin caja. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de bubble simple sin caja. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -252,7 +252,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-bubble-en-caja',
-        descripcion: 'Vela con diseño de bubble en caja de acetato transparente. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de bubble en caja de acetato transparente. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
         
@@ -264,7 +264,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-mini-bubble-souvenir-pack',
-        descripcion: 'Vela con diseño de mini bubble. Dulce, simpática y lista para sorprender. Viene con envoltorio personalizado para tu evento. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de mini bubble. Dulce, simpática y lista para sorprender. Viene con envoltorio personalizado para tu evento.',
         categoria: 'souvenirs',
       },
       {
@@ -275,7 +275,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-nube',
-        descripcion: 'Vela con diseño de nubecita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de nubecita. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
 
@@ -287,7 +287,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-flores-en-caja',
-        descripcion: 'Vela con diseño de flores en caja. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de flores en caja. Dulce, simpática y lista para sorprender. Viene con cintita decorativa y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -297,7 +297,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'velas-flor-lotojpg',
-        descripcion: 'Velas con diseño de flor. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Velas con diseño de flor. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -308,7 +308,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-flor-peonia',
-        descripcion: 'Vela con diseño de flor. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de flor. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -319,7 +319,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-rosa-souvenir',
-        descripcion: 'Vela con diseño de rosa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de rosa. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -329,7 +329,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-clavelina-souvenir',
-        descripcion: 'Vela con diseño de clavelina. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de clavelina. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -340,7 +340,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-margaritas-souvenir',
-        descripcion: 'Vela con diseño de margaritas. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de margaritas. Dulce, simpática y lista para sorprender. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       
@@ -352,7 +352,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-corazon-souvenir',
-        descripcion: 'Vela con diseño de Corazon. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de Corazon. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -362,7 +362,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-oso-corazon-souvenir',
-        descripcion: 'Vela con diseño de Oso con corazon. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades..',
+        descripcion: 'Vela con diseño de Oso con corazon. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -373,7 +373,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-oso-panzon',
-        descripcion: 'Vela con diseño de Oso panzón. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela con diseño de Oso panzón. Ideal para decorar o regalar. Viene con bolsita transparente de polipropileno y tarjetita personalizada.',
         categoria: 'souvenirs',
       },
       {
@@ -384,7 +384,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-souvenir-envase100cc',
-        descripcion: 'Vela aromatica en envase 100cc. Ideal para decorar o regalar. Viene con vinilo personalizado y cinta del color que elijas. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela aromatica en envase 100cc. Ideal para decorar o regalar. Viene con vinilo personalizado y cinta del color que elijas.',
         categoria: 'souvenirs',
       },
       {
@@ -395,7 +395,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-souvenir-envase40cc',
-        descripcion: 'Vela aromatica en envase 40cc. Ideal para decorar o regalar. Viene con vinilo personalizado y cinta del color que elijas. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela aromatica en envase 40cc. Ideal para decorar o regalar. Viene con vinilo personalizado y cinta del color que elijas.',
         categoria: 'souvenirs',
       },
       
@@ -406,7 +406,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-souvenir-caramelera-sin-tapa',
-        descripcion: 'Vela aromatica en caramelera sin tapa. Ideal para decorar o regalar. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela aromatica en caramelera sin tapa. Ideal para decorar o regalar.',
         categoria: 'souvenirs',
       },
       {
@@ -416,7 +416,7 @@ export const souvenirs = [
         stock: true,
         destacado: false,
         slug: 'vela-souvenir-caramelera-con-tapa',
-        descripcion: 'Vela aromatica en caramelera con tapa. Ideal para decorar o regalar. Cantidad minima: 10 unidades.',
+        descripcion: 'Vela aromatica en caramelera con tapa. Ideal para decorar o regalar.',
         categoria: 'souvenirs',
       },
     
