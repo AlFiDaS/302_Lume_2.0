@@ -687,5 +687,12 @@ img {
   }
 }
 
+/* 📱 RESPONSIVE PARA PANTALLAS MUY PEQUEÑAS (410px y menos) */
+@media (max-width: 410px) {
+  .container {
+    padding: 0;
+  }
+}
+
 
 

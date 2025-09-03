@@ -42,7 +42,7 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto 2rem auto;
-    z-index: 1000;
+    z-index: 100;
   }
 
   .search-input-wrapper {
@@ -100,7 +100,7 @@
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.2s ease;
-    z-index: 1001;
+    z-index: 101;
   }
 
   .search-results-visible {
@@ -145,5 +145,16 @@
   .search-results-list {
     max-height: 320px;
     overflow-y: auto;
+  }
+
+  /* 🎯 AJUSTES PARA MÓVIL - Z-INDEX REDUCIDO */
+  @media (max-width: 767px) {
+    .product-search-container {
+      z-index: 50;
+    }
+    
+    .search-results {
+      z-index: 51;
+    }
   }
 </style>

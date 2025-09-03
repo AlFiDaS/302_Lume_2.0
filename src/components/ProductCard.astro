@@ -57,7 +57,7 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
 
 <style>
   .product-card {
-    background: #fff;
+    background: linear-gradient(135deg, #fff 0%, #fefefe 100%);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -67,6 +67,39 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
     height: 100%;
     position: relative;
     border: 1px solid #f0f0f0;
+    position: relative;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #e0a4ce, #f7d4ed, #e0a4ce);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .product-card:hover::before {
+    opacity: 1;
+  }
+
+  .product-card::after {
+    content: '🌸';
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .product-card:hover::after {
+    opacity: 0.7;
+    transform: rotate(15deg) scale(1.1);
   }
 
   .product-card:hover {
@@ -117,43 +150,108 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
   }
 
   .info {
-    padding: var(--space-md);
+    padding: var(--space-xs);
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: 0.25rem;
     text-align: center;
-    background: #fff;
+    background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
     flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
+    position: relative;
+    border-top: 1px solid #f8f9fa;
+  }
+
+  .info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e0a4ce, transparent);
+    opacity: 0.5;
   }
 
   h3 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 600;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    max-height: 2.8em;
+    height: 2.9rem; /* Altura más compacta */
     overflow: hidden;
-    letter-spacing: -0.2px;
+    letter-spacing: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    background: linear-gradient(135deg, #2c2c2c, #4a4a4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #e0a4ce, transparent);
+    border-radius: 1px;
+    opacity: 0.7;
   }
 
   .price {
     font-weight: 700;
     color: var(--primary);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #e0a4ce, #f7d4ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(224, 164, 206, 0.3);
+    position: relative;
+    padding: 0;
+  }
+
+  .price::before {
+    content: '✨';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+
+  .price::after {
+    content: '✨';
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    opacity: 0.7;
   }
 
   .btn-agregar {
     background: linear-gradient(135deg, #e0a4ce, #d89bc0);
     color: #fff;
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: var(--radius-md);
     font-size: 1rem;
@@ -162,12 +260,16 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
     transition: all var(--transition-normal);
     box-shadow: var(--shadow-sm);
     white-space: nowrap;
-    min-height: 44px;
+    min-height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
   }
 
   .btn-agregar::after {
@@ -215,7 +317,7 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
     }
     
     .info {
-      padding: var(--space-sm);
+      padding: var(--space-xs);
     }
     
     h3 {
@@ -239,11 +341,11 @@ const displayHover = hasValidHover ? hoverImage : displayImage;
     }
     
     .info {
-      padding: var(--space-sm);
+      padding: var(--space-xs);
     }
     
     h3 {
-      font-size: 0.9rem;
+      font-size: 0.75rem;
     }
     
     .price {
