@@ -11,11 +11,11 @@ export interface Props {
 
 const { name, price, image, hoverImage, slug, categoria, stock = true } = Astro.props;
 
-// 🖼️ VALIDACIÓN DE IMÁGENES
+// 🖼️ VALIDACIÓN DE IMÁGENES (ARREGLADA)
 const hasValidImage = image && image !== '';
 const hasValidHover = hoverImage && hoverImage !== '';
 const displayImage = hasValidImage ? image : '/images/placeholder.svg';
-const displayHover = hasValidHover ? hoverImage : image;
+const displayHover = hasValidHover ? hoverImage : displayImage;
 ---
 
 <div class="product-card">
@@ -25,8 +25,6 @@ const displayHover = hasValidHover ? hoverImage : image;
       <img
         src={displayImage}
         alt={`${name} - Lume Velas Artesanales`}
-        loading="lazy"
-        decoding="async"
         class="imagen-con-transicion"
         width="400"
         height="400"

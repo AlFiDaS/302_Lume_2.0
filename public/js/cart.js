@@ -9,25 +9,35 @@ export function saveCarrito(carrito) {
   updateCartCount();
 }
 
-export function agregarAlCarrito(producto) {
+// Función global para agregar al carrito (RESTAURADA)
+function agregarAlCarrito(name, price, image, slug, categoria) {
   let carrito = getCarrito();
 
   const index = carrito.findIndex(
-    (p) => p.slug === producto.slug && p.name === producto.name
+    (p) => p.slug === slug && p.name === name
   );
 
-  const esSouvenir = producto.categoria === "souvenirs";
+  const esSouvenir = categoria === "souvenirs";
 
   if (index !== -1) {
     carrito[index].cantidad++;
   } else {
-    carrito.push({ ...producto, cantidad: esSouvenir ? 10 : 1 });
+    carrito.push({ 
+      name, 
+      price, 
+      image, 
+      slug, 
+      categoria, 
+      cantidad: esSouvenir ? 10 : 1 
+    });
   }
 
   saveCarrito(carrito);
-  mostrarToast(`${producto.name} agregado al carrito 🛒`);
+  mostrarToast(`${name} agregado al carrito 🛒`);
 }
 
+// Hacer la función disponible globalmente
+window.agregarAlCarrito = agregarAlCarrito;
 
 export function updateCartCount() {
   const carrito = getCarrito();
