@@ -228,10 +228,11 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       }
 
       let totalConTarjeta = pago === 'tarjeta' ? Math.round(totalCarrito * 1.25) : totalCarrito;
-      let totalFinal = totalConTarjeta + envioCosto;
+      let envioConTarjeta = pago === 'tarjeta' ? Math.round(envioCosto * 1.25) : envioCosto;
+      let totalFinal = totalConTarjeta + envioConTarjeta;
 
       carritoTotalEl.textContent = `$${totalConTarjeta}`;
-      envioInfoEl.textContent = envioTexto;
+      envioInfoEl.textContent = pago === 'tarjeta' ? `$${envioConTarjeta} (+25%)` : envioTexto;
       totalEl.textContent = `$${totalFinal}`;
 
       let datosCliente = `*Datos del cliente:*\nNombre: ${nombre}\nTipo de envío: ${envio}`;
