@@ -261,16 +261,16 @@ export const productos = [
     descripcion: 'Vela artesanal en recipiente de yeso perlado, con tapa y lazo decorativo.',
     categoria: 'productos',
   },
-  {
-    image: '/images/vela-pearl-mayor/main.webp',
-    name: 'Vela Pearl por mayor',
-    price: '$0',
-    stock: true,
-    destacado: false,
-    slug: 'vela-pearl-mayor', 
-    descripcion: 'Vela artesanal en recipiente de yeso perlado, con tapa y lazo decorativo. Consultar precio al por mayor.',
-    categoria: 'productos',
-  },
+  // {
+  //   image: '/images/vela-pearl-mayor/main.webp',
+  //   name: 'Vela Pearl por mayor',
+  //   price: '$0',
+  //   stock: true,
+  //   destacado: false,
+  //   slug: 'vela-pearl-mayor', 
+  //   descripcion: 'Vela artesanal en recipiente de yeso perlado, con tapa y lazo decorativo. Consultar precio al por mayor.',
+  //   categoria: 'productos',
+  // },
 
    {
     image: '/images/velas-set-aromaticas/main.webp',
