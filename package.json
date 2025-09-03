@@ -1,7 +1,7 @@
 {
   "name": "lume-velas-artesanales",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.1.0-2025-09-03T22-17-43",
   "description": "Sitio web optimizado de Lume - Velas Artesanales de Corrientes",
   "keywords": [
     "velas",
@@ -20,6 +20,7 @@
     "astro": "astro",
     "build:analyze": "astro build --analyze",
     "build:production": "NODE_ENV=production astro build",
+    "build:versioned": "node scripts/build-with-version.js",
     "lighthouse": "lighthouse http://localhost:4321 --output html --output-path ./lighthouse-report.html",
     "test:performance": "npm run build && npm run lighthouse",
     "optimize:images": "node scripts/optimize-images.js",

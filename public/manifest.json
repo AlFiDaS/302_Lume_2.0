@@ -1,6 +1,7 @@
 {
   "name": "Lume - Velas Artesanales",
   "short_name": "Lume",
+  "version": "2.1.0-2025-09-03T22-17-43",
   "description": "Velas artesanales únicas, souvenirs personalizados y velas aromáticas desde Corrientes",
   "start_url": "/",
   "display": "standalone",

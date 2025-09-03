@@ -1,7 +1,7 @@
 // 🚀 SERVICE WORKER OPTIMIZADO - Lume 2.0
-const CACHE_NAME = 'lume-v2.0';
-const STATIC_CACHE = 'lume-static-v2.0';
-const DYNAMIC_CACHE = 'lume-dynamic-v2.0';
+const CACHE_NAME = 'lume-2.1.0-2025-09-03T22-17-43';
+const STATIC_CACHE = 'lume-static-2.1.0-2025-09-03T22-17-43';
+const DYNAMIC_CACHE = 'lume-dynamic-2.1.0-2025-09-03T22-17-43';
 
 // 📱 ESTRATEGIAS DE CACHE
 const STATIC_ASSETS = [
