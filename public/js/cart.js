@@ -50,6 +50,9 @@ export function updateCartCount() {
   if (badgeMobile) badgeMobile.textContent = total;
 }
 
+// También hacer updateCartCount global para que esté disponible en todas las páginas
+window.updateCartCount = updateCartCount;
+
 function mostrarToast(mensaje) {
   const toast = document.createElement("div");
   toast.textContent = mensaje;

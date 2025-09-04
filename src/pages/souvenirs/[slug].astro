@@ -37,10 +37,10 @@ const { souvenir } = Astro.props;
           
           {souvenir.hoverImage && (
             <div class="thumbnails">
-              <div class="thumbnail active" onclick={`cambiarImagen('${souvenir.image}')`}>
+              <div class="thumbnail active" data-image={souvenir.image}>
                 <img src={souvenir.image} alt={souvenir.name} />
               </div>
-              <div class="thumbnail" onclick={`cambiarImagen('${souvenir.hoverImage}')`}>
+              <div class="thumbnail" data-image={souvenir.hoverImage}>
                 <img src={souvenir.hoverImage} alt={souvenir.name} />
               </div>
             </div>
@@ -85,12 +85,16 @@ const { souvenir } = Astro.props;
            <!-- Acciones -->
            <div class="producto-actions">
              {souvenir.stock ? (
-               <button
-                 class="btn-agregar"
-                 onclick={`agregarAlCarrito('${souvenir.name}', '${souvenir.price}', '${souvenir.image}', '${souvenir.slug}', 'souvenirs')`}
-               >
-                 Agregar al carrito
-               </button>
+                             <button
+                class="btn-agregar"
+                data-name={souvenir.name}
+                data-price={souvenir.price}
+                data-image={souvenir.image}
+                data-slug={souvenir.slug}
+                data-categoria="souvenirs"
+              >
+                Agregar al carrito
+              </button>
              ) : (
                <button class="btn-agregar" disabled>Sin stock</button>
              )}
@@ -122,14 +126,11 @@ const { souvenir } = Astro.props;
     <InfoVelas />
   </div>
 
-  <script type="module" is:inline>
-    import { agregarAlCarrito } from '/js/cart.js';
+  <script is:inline>
+    // La función agregarAlCarrito ya está disponible globalmente desde cart.js
 
-    window.agregarAlCarrito = (name, price, image, slug, categoria) => {
-      agregarAlCarrito({ name, price, image, slug, categoria });
-    };
-
-    window.cambiarImagen = (src) => {
+    // Función para cambiar imagen
+    function cambiarImagen(src) {
       const mainImage = document.getElementById('main-image');
       const thumbnails = document.querySelectorAll('.thumbnail');
       
@@ -146,7 +147,47 @@ const { souvenir } = Astro.props;
           thumb.classList.remove('active');
         }
       });
-    };
+    }
+
+    // Función para inicializar la galería
+    function inicializarGaleria() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+          const imageSrc = thumbnail.getAttribute('data-image');
+          if (imageSrc) {
+            cambiarImagen(imageSrc);
+          }
+        });
+      });
+
+      // También inicializar el botón de agregar al carrito
+      const btnAgregar = document.querySelector('.btn-agregar');
+      if (btnAgregar) {
+        btnAgregar.addEventListener('click', () => {
+          const name = btnAgregar.getAttribute('data-name');
+          const price = btnAgregar.getAttribute('data-price');
+          const image = btnAgregar.getAttribute('data-image');
+          const slug = btnAgregar.getAttribute('data-slug');
+          const categoria = btnAgregar.getAttribute('data-categoria');
+          
+          if (name && price && image && slug && categoria) {
+            agregarAlCarrito(name, price, image, slug, categoria);
+          }
+        });
+      }
+    }
+
+    // Intentar inicializar inmediatamente
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', inicializarGaleria);
+    } else {
+      inicializarGaleria();
+    }
+
+    // También intentar después de un pequeño delay por si acaso
+    setTimeout(inicializarGaleria, 100);
   </script>
 
   <style>

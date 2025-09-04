@@ -37,10 +37,10 @@ const { producto } = Astro.props;
           
           {producto.hoverImage && (
             <div class="thumbnails">
-              <div class="thumbnail active" onclick={`cambiarImagen('${producto.image}')`}>
+              <div class="thumbnail active" data-image={producto.image}>
                 <img src={producto.image} alt={producto.name} />
               </div>
-              <div class="thumbnail" onclick={`cambiarImagen('${producto.hoverImage}')`}>
+              <div class="thumbnail" data-image={producto.hoverImage}>
                 <img src={producto.hoverImage} alt={producto.name} />
               </div>
             </div>
@@ -83,7 +83,11 @@ const { producto } = Astro.props;
             {producto.stock ? (
               <button
                 class="btn-agregar"
-                onclick={`agregarAlCarrito('${producto.name}', '${producto.price}', '${producto.image}', '${producto.slug}', 'productos')`}
+                data-name={producto.name}
+                data-price={producto.price}
+                data-image={producto.image}
+                data-slug={producto.slug}
+                data-categoria="productos"
               >
                 Agregar al carrito
               </button>
@@ -118,14 +122,11 @@ const { producto } = Astro.props;
     <InfoVelas />
   </div>
 
-  <script type="module" is:inline>
-    import { agregarAlCarrito } from '/js/cart.js';
+  <script is:inline>
+    // La función agregarAlCarrito ya está disponible globalmente desde cart.js
 
-    window.agregarAlCarrito = (name, price, image, slug, categoria) => {
-      agregarAlCarrito({ name, price, image, slug, categoria });
-    };
-
-    window.cambiarImagen = (src) => {
+    // Función para cambiar imagen
+    function cambiarImagen(src) {
       const mainImage = document.getElementById('main-image');
       const thumbnails = document.querySelectorAll('.thumbnail');
       
@@ -142,7 +143,47 @@ const { producto } = Astro.props;
           thumb.classList.remove('active');
         }
       });
-    };
+    }
+
+    // Función para inicializar la galería
+    function inicializarGaleria() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+          const imageSrc = thumbnail.getAttribute('data-image');
+          if (imageSrc) {
+            cambiarImagen(imageSrc);
+          }
+        });
+      });
+
+      // También inicializar el botón de agregar al carrito
+      const btnAgregar = document.querySelector('.btn-agregar');
+      if (btnAgregar) {
+        btnAgregar.addEventListener('click', () => {
+          const name = btnAgregar.getAttribute('data-name');
+          const price = btnAgregar.getAttribute('data-price');
+          const image = btnAgregar.getAttribute('data-image');
+          const slug = btnAgregar.getAttribute('data-slug');
+          const categoria = btnAgregar.getAttribute('data-categoria');
+          
+          if (name && price && image && slug && categoria) {
+            agregarAlCarrito(name, price, image, slug, categoria);
+          }
+        });
+      }
+    }
+
+    // Intentar inicializar inmediatamente
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', inicializarGaleria);
+    } else {
+      inicializarGaleria();
+    }
+
+    // También intentar después de un pequeño delay por si acaso
+    setTimeout(inicializarGaleria, 100);
   </script>
 
   <style>
