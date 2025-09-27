@@ -34,7 +34,7 @@ export const productos = [
    
       { image: '/images/ramo-flores-7/main.webp',
         name: 'Ramo con 7 flores. Coleccion XOXO',
-        price: '$14900',
+        price: '$15900',
         stock: true,
         destacado: true,
         slug: 'ramo-flores-7',

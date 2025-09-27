@@ -32,4 +32,12 @@ export const galeria = [
   { src: "/images/0_galeria/idea31.webp", alt: "Idea 31" },
   { src: "/images/0_galeria/idea32.webp", alt: "Idea 32" },
   { src: "/images/0_galeria/idea33.webp", alt: "Idea 33" },
+  { src: "/images/0_galeria/idea34.webp", alt: "Idea 34" },
+  { src: "/images/0_galeria/idea35.webp", alt: "Idea 35" },
+  { src: "/images/0_galeria/idea36.webp", alt: "Idea 36" },
+  { src: "/images/0_galeria/idea37.webp", alt: "Idea 37" },
+  { src: "/images/0_galeria/idea38.webp", alt: "Idea 38" },
+  { src: "/images/0_galeria/idea39.webp", alt: "Idea 39" },
+  { src: "/images/0_galeria/idea40.webp", alt: "Idea 40" },
+  { src: "/images/0_galeria/idea41.webp", alt: "Idea 41" },
 ];
