@@ -39,20 +39,21 @@ export const productos = [
         destacado: true,
         slug: 'ramo-flores-7',
         descripcion: 'Ramo con 7 flores. Coleccion XOXO by Lume. Dulce, simpática y lista para sorprender.',
-    categoria: 'productos',
+        categoria: 'productos',
       },
 
-{
-    image: '/images/vela-aromatica/main.webp',
-    hoverImage: '/images/vela-aromatica/hover.webp',
-    name: 'Vela Aromatica',
-    price: '$10900',
-    stock: true,
-    destacado: false,
-    slug: 'vela-aromatica',
-    descripcion: 'Vela aromatica en frasco. Ideal para decorar o regalar.',
-    categoria: 'productos',
-  },
+      { image: '/images/ramo-flores-XL/main.webp',
+        hoverImage: '/images/ramo-flores-XL/hover.webp',
+        name: 'Ramo de flores XL',
+        price: '$23900',
+        stock: true,
+        destacado: false,
+        slug: 'ramo-flores-XL',
+        descripcion: 'Ramo de flores XL. Dulce, simpática y lista para sorprender.',
+        categoria: 'productos',
+      },
+
+
   {
     image: '/images/vela-iced-coffe/hover.webp',
     hoverImage: '/images/vela-iced-coffe/main.webp',
@@ -84,6 +85,29 @@ export const productos = [
     destacado: false,
     slug: 'velas-strawberry-smothie',
     descripcion: 'Velas con diseño de strawberry smothie. Tiene aroma a frutilla.',
+    categoria: 'productos',
+  },
+
+  {
+    image: '/images/vela-aromatica/main.webp',
+    hoverImage: '/images/vela-aromatica/hover.webp',
+    name: 'Vela Aromatica',
+    price: '$10900',
+    stock: true,
+    destacado: false,
+    slug: 'vela-aromatica',
+    descripcion: 'Vela aromatica en frasco. Ideal para decorar o regalar.',
+    categoria: 'productos',
+  },
+
+  {
+    image: '/images/box-butterfly/main.webp',
+    name: 'Box Butterfly',
+    price: '$17900',
+    stock: true,
+    destacado: false,
+    slug: 'box-butterfly',
+    descripcion: 'Box butterfly con una vela aromatica con forma de mariposa y unos bombones aromáticos, especial para aromatizar tu placard, cajones o para hornitos de ceramica. Ideal para decorar o regalar.',
     categoria: 'productos',
   },
 
@@ -212,7 +236,7 @@ export const productos = [
   {
     image: '/images/set-velas-20cm-amore/main.webp',
     name: 'Set 3 Velas Amore de 20 cm',
-    price: '$10500',
+    price: '$11200',
     stock: true,
     destacado: false,
     slug: 'set-velas-20cm-amore',
@@ -222,7 +246,7 @@ export const productos = [
   {
     image: '/images/set-velas-20cm-verde/main.webp',
     name: 'Set 3 Velas Verde de 20 cm',
-    price: '$10500',
+    price: '$11200',
     stock: true,
     destacado: false,
     slug: 'set-velas-20cm-verde',
