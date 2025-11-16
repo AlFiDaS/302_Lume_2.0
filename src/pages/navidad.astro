@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ProductSearch from '../components/ProductSearch.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { productosNavidad } from '../data/navidad.js';
+import InfoVelas from '../components/InfoVelas.astro';
+---
+
+<Layout
+  title="Productos Navideños - Lume"
+  description="Descubrí nuestra colección especial navideña de velas artesanales. Productos únicos para decorar tu hogar en estas fiestas."
+>
+  <Breadcrumb items={[
+    { text: "Inicio", href: "/" },
+    { text: "Navidad" }
+  ]} />
+
+  <section class="catalogo">
+    <div class="container">
+      <div class="section-header">
+        <h1>Colección Navideña</h1>
+        <p>Productos exclusivos para estas fiestas especiales</p>
+      </div>
+      
+      <!-- Componente de búsqueda -->
+      <ProductSearch />
+      
+      <div class="grid">
+        {productosNavidad.map((producto) => (
+          <ProductCard {...producto} />
+        ))}
+      </div>
+
+      {productosNavidad.length === 0 && (
+        <div class="empty-state">
+          <p>Próximamente agregaremos productos navideños especiales.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <InfoVelas />
+
+  <style>
+    .catalogo {
+      padding: var(--space-lg) 0;
+      background: linear-gradient(135deg, var(--surface-light) 0%, #fff 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .section-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section-header p {
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      color: var(--text-secondary);
+      font-size: var(--font-size-lg);
+    }
+
+    /* 📱 RESPONSIVE DESIGN */
+    @media (max-width: 1200px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 0;
+      }
+      
+      .section-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</Layout>
+

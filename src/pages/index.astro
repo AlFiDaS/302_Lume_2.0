@@ -4,11 +4,13 @@ import ProductCard from '../components/ProductCard.astro';
 import HeroSlider from '../components/HeroSlider.astro';
 import { productos } from '../data/productos.js';
 import { souvenirs } from '../data/souvenirs.js';
+import { productosNavidad } from '../data/navidad.js';
 
 // Filtrar los destacados
 const productosDestacados = [
   ...productos.map(p => ({ ...p, categoria: 'productos' })),
-  ...souvenirs.map(s => ({ ...s, categoria: 'souvenirs' }))
+  ...souvenirs.map(s => ({ ...s, categoria: 'souvenirs' })),
+  ...productosNavidad.map(n => ({ ...n, categoria: 'navidad' }))
 ].filter(p => p.destacado).slice(0, 5);
 
 // Para móvil, mostrar solo 4 productos
