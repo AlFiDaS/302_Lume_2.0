@@ -116,7 +116,7 @@ const canonicalURL = canonical ? new URL(canonical, Astro.site) : Astro.url;
     <Footer />
     
     <!-- 🔄 SERVICE WORKER -->
-    <script>
+    <script is:inline>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
@@ -131,7 +131,7 @@ const canonicalURL = canonical ? new URL(canonical, Astro.site) : Astro.url;
     </script>
     
     <!-- 📱 PWA INSTALL PROMPT -->
-    <script>
+    <script is:inline>
       let deferredPrompt;
       window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();

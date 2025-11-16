@@ -149,7 +149,7 @@ const responsiveSizes = {
   }
 </style>
 
-<script>
+<script is:inline>
   // 🚀 INTERSECTION OBSERVER PARA LAZY LOADING AVANZADO
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -175,14 +175,14 @@ const responsiveSizes = {
     });
 
     // Observar todas las imágenes optimizadas
-    document.querySelectorAll('.optimized-image img').forEach((img: Element) => {
+    document.querySelectorAll('.optimized-image img').forEach((img) => {
       imageObserver.observe(img);
     });
   }
 
   // 📊 MÉTRICAS DE PERFORMANCE
   document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.optimized-image img') as NodeListOf<HTMLImageElement>;
+    const images = document.querySelectorAll('.optimized-image img');
     
     images.forEach(img => {
       img.addEventListener('load', () => {

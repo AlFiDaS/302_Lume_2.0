@@ -28,6 +28,12 @@ export default defineConfig({
     // Optimizaciones de Vite
     optimizeDeps: {
       include: ['@splidejs/splide']
+    },
+    // 🔧 DESHABILITAR TRANSFORMACIONES DE CONSOLE NINJA
+    esbuild: {
+      legalComments: 'none',
+      // Ignorar código inyectado por extensiones de debugging
+      exclude: [],
     }
   },
   
