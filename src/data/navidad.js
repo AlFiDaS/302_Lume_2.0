@@ -144,13 +144,14 @@ export const productosNavidad = [
     categoria: 'navidad',
   },
   
-  { image: '/images/00_navidad/set-velones-rayados/main.webp', 
-    name: 'Set Velones Rayados',
-    price: '$25000',
+  { image: '/images/00_navidad/set-velones-rayados/main2.webp',
+    hoverImage: '/images/00_navidad/set-velones-rayados/hover.webp',
+    name: 'Set Golden',
+    price: '$23900',
     stock: true,
     destacado: false,
     slug: 'set-velones-rayados',
-    descripcion: 'Set de velones rayados. Ideal para decorar o regalar en las fiestas.',
+    descripcion: 'Set de velones rayados de 15 y 13cm con base irregular. Ideal para decorar o regalar en las fiestas.',
     categoria: 'navidad',
   },
   { image: '/images/00_navidad/set-velones-rayados/big.webp', 
@@ -181,6 +182,17 @@ export const productosNavidad = [
     categoria: 'navidad',
   },
 
+  {
+    image: '/images/portacandelabro/main.webp',
+    hoverImage: '/images/portacandelabro/hover.webp',
+    name: 'Portacandelabro',
+    price: '$6000',
+    stock: true,
+    destacado: false,
+    slug: 'portacandelabro',
+    descripcion: 'Hermoso portacandelabro. Ideal para decorar centro de mesa o para eventos.',
+    categoria: 'productos',
+  },
   
 ];
 
